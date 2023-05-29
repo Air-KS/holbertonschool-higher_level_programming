@@ -1,5 +1,4 @@
 #!/usr/bin/python3
 
-for index in range(ord('A'), ord('Z') + 1):
-    alpha = chr(index)
-    print(alpha, end="")
+for index in range(ord('a'), ord('z') + 1):
+    print(chr(index), end="")
