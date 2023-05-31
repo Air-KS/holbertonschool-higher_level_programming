@@ -4,12 +4,10 @@ if __name__ == "__main__":
 
     count = len(sys.argv) - 1
     if count == 0:
-        print("{} argument".format(count))
+        print("0 arguments.")
     elif count == 1:
-        print("{} Argument:".format(count))
+        print("1 argument:")
     else:
-        print("{} Arguments:".format(count))
-
-    for index in range(1, count + 1):
-        # print(index, ":", sys.argv[index])
-        print("{}: {}".format(index, sys.argv[index]))
+        print("{} arguments:".format(count))
+    for i in range(count):
+        print("{}: {}".format(i + 1, sys.argv[i + 1]))
