@@ -3,10 +3,12 @@ if __name__ == "__main__":
     import sys
     count = len(sys.argv) - 1
 
-    if count == 1 or count == 2:
+    if count < 0 or count == 0:
         print("Not argument")
+    elif count == 1:
+        print("{} Argument:".format(count))
     else:
-        print("{} Argument :".format(count))
+        print("{} Arguments:".format(count))
 
     for index in range(1, count + 1):
         # print(index, ":", sys.argv[index])
