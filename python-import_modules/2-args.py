@@ -9,4 +9,5 @@ if __name__ == "__main__":
         print("{} Argument :".format(count))
 
     for index in range(1, count + 1):
+        # print(index, ":", sys.argv[index])
         print("{}: {}".format(index, sys.argv[index]))
