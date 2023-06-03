@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
-for alpha in range(ord("z"), ord("a") - 1, -1):
-    if alpha % 2 == 0:
-        print(chr(alpha).lower(), end="")
+#!/usr/bin/python3
+
+for alpha in range(ord('z'), ord('a') -1, -1):
+    if alpha %2 == 0:
+        print("{}".format(chr(alpha)), end="")
     else:
-        print(chr(alpha).upper(), end="")
-    alpha = 1 - alpha
+        print("{}".format(chr(alpha - 32)), end="")
