@@ -6,5 +6,5 @@ Define a Square class
 
 
 class Square:
-    """A Square class"""
+    """A Square classs"""
     pass
