@@ -55,11 +55,11 @@ class Square:
         for _ in range(self.__position[1]):
             print("")
 
-        #Affiche les ligne de motif
+        # Affiche les ligne de motif
         for _ in range(self.__size):
             for _ in range(self.__position[0]):
                 print(" ", end="")
-            #
+
             for _ in range(self.__size):
                 print("#", end="")
-            print("")# Passé à la ligne
+            print("")
