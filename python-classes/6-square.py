@@ -49,8 +49,17 @@ class Square:
     def my_print(self):
         if self.__size == 0:
             print()
-        else:
-            print("\n"*self.__position[1], end="")
-            for index in range(0, self.__size):
-                print(" "*self.__position[0], end="")
-                print("#"*self.__size)
+            return
+
+        # Afficher la marge supperieur
+        for _ in range(self.__position[1]):
+            print("")
+
+        #Affiche les ligne de motif
+        for _ in range(self.__size):
+            for _ in range(self.__position[0]):
+                print(" ", end="")
+            #
+            for _ in range(self.__size):
+                print("#", end="")
+            print("")# Passé à la ligne
