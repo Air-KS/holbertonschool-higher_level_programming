@@ -12,7 +12,8 @@ class Rectangle:
         Initialize the Rectangle
 
         Args:
-        width, height (int): The size of the Rectangle
+        width, (int): The width of the new Rectangle
+        height (int): The height of the new Rectangle
         """
         self.width = width
         self.height = height
@@ -22,11 +23,6 @@ class Rectangle:
         """Getter method for the width property"""
         return (self.__width)
 
-    @property
-    def height(self):
-        """Getter method for the height property"""
-        return (self.__height)
-
     @width.setter
     def width(self, value):
         if type(value) is not int:
@@ -35,6 +31,11 @@ class Rectangle:
             raise ValueError("width mus be >= 0")
         else:
             self.__width = value
+
+    @property
+    def height(self):
+        """Getter method for the height property"""
+        return (self.__height)
 
     @height.setter
     def height(self, value):
