@@ -75,5 +75,6 @@ class Rectangle:
         width, height = self.__width, self.__height
         return ("Rectangle({}, {})".format(width, height))
 
-    def __delete__(self):
+    def __del__(self):
+        """ Print a message for delete the Rectangle. """
         print("Bye rectangle...")
