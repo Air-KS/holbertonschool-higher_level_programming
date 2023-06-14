@@ -75,6 +75,11 @@ class Rectangle:
             return (rect_1)
         return (rect_2)
 
+    @classmethod
+    def square(cls, size=0):
+        """ Create a Square """
+        return (cls(size, size))
+
     def area(self):
         """Return the area of the rectangle"""
         return (self.__width * self.__height)
@@ -84,15 +89,6 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
-
-    @classmethod
-    def square(cls, size=0):
-        """ Return a new Rectangle with width and height equal to size.
-
-        args:
-            size (int): The width and height of the new Rectangle.
-        """
-        return (cls(size, size))
 
     def __str__(self):
         """
