@@ -42,3 +42,8 @@ Non-integer or non-float inputs:
     ...     add_integer(None)
     ... except TypeError as e:
     ...     assert str(e) == "a must be an integer", "Failed test case 12"
+
+Boundary cases:
+    >>> assert add_integer(0, 0) == 0, "Failed test case 13"
+    >>> assert add_integer(2147483647, 1) == 2147483648, "Failed test case 14"
+    >>> assert add_integer(-2147483648, -1) == -2147483649, "Failed test case 15"
