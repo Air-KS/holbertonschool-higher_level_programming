@@ -1,20 +1,44 @@
 # 0-add_integer.txt
 =======================
 
-Usign "add_integer" to Function
+Using "add_integer" Function
 ********************************
 
-Importing the function from the modul
-	>>> add_integer = __import__("0-add_integer").add_integer
+Importing the function from the module
+    >>> add_integer = __import__("0-add_integer").add_integer
 
 Regular addition:
-	>>> add_integer(2, 3)
-	5
+    >>> assert add_integer(2, 3) == 5, "Failed test case 1"
 
 Positive with negative:
-	>>> add_integer(2, -4)
-	-2
+    >>> assert add_integer(2, -4) == -2, "Failed test case 2"
 
 Negative with positive:
-	>>> add_integer(-6, 8)
-	2
+    >>> assert add_integer(-6, 8) == 2, "Failed test case 3"
+
+Zero with positive:
+    >>> assert add_integer(0, 5) == 5, "Failed test case 4"
+
+Positive with zero:
+    >>> assert add_integer(7, 0) == 7, "Failed test case 5"
+
+Zero with negative:
+    >>> assert add_integer(0, -3) == -3, "Failed test case 6"
+
+Negative with zero:
+    >>> assert add_integer(-9, 0) == -9, "Failed test case 7"
+
+Floating point numbers:
+    >>> assert add_integer(2.5, 3.7) == 5, "Failed test case 8"
+    >>> assert add_integer(4.8, -2.3) == 2, "Failed test case 9"
+    >>> assert add_integer(-6.9, 8.1) == 1, "Failed test case 10"
+
+Non-integer or non-float inputs:
+    >>> try:
+    ...     add_integer(4, "School")
+    ... except TypeError as e:
+    ...     assert str(e) == "b must be an integer", "Failed test case 11"
+    >>> try:
+    ...     add_integer(None)
+    ... except TypeError as e:
+    ...     assert str(e) == "a must be an integer", "Failed test case 12"
