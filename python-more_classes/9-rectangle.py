@@ -76,6 +76,11 @@ class Rectangle:
         else:
             return (rect_2)
 
+    @classmethod
+    def square(cls, size=0):
+        """ Create a Square """
+        return (cls(size, size))
+
     def area(self):
         """Return the area of the rectangle"""
         return (self.__width * self.__height)
@@ -108,8 +113,3 @@ class Rectangle:
         """
         width, height = self.__width, self.__height
         return ("Rectangle({:d}, {:d})".format(width, height))
-
-    @classmethod
-    def square(cls, size=0):
-        """ Create a Square """
-        return (cls(size, size))
