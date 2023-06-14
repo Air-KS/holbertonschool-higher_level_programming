@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Module 1-Rectangle
-Define a Rectangle class
+based on 0-square.py
 """
 
 
@@ -30,12 +29,6 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """
-        Setter method for the width property
-
-        Args:
-        value (int): The new value for the width
-        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -45,12 +38,6 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """
-        Setter method for the height property
-
-        Args:
-        value (int): The new value for the height
-        """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         elif value < 0:
