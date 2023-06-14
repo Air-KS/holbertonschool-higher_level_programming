@@ -57,29 +57,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    def __str__(self):
-        """
-        Affiche le rectangle avec le symbol spécifié
-        """
-        width, height = self.__width, self.__height
-        symbol = self.print_symbol
-
-        if width == 0 or height == 0:
-            return ""
-
-        line = str(symbol) * width
-        rectangle = line
-        for _ in range(height - 1):
-            rectangle += "\n" + line
-        return (rectangle)
-
-    def __repr__(self):
-        """
-            Return un string represente if the Rectangle
-        """
-        width, height = self.__width, self.__height
-        return ("Rectangle({}, {})".format(width, height))
-
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """ Return the Rectangle with the greater area.
@@ -112,3 +89,26 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
+
+    def __str__(self):
+        """
+        Affiche le rectangle avec le symbol spécifié
+        """
+        width, height = self.__width, self.__height
+        symbol = self.print_symbol
+
+        if width == 0 or height == 0:
+            return ""
+
+        line = str(symbol) * width
+        rectangle = line
+        for _ in range(height - 1):
+            rectangle += "\n" + line
+        return (rectangle)
+
+    def __repr__(self):
+        """
+            Return un string represente if the Rectangle
+        """
+        width, height = self.__width, self.__height
+        return ("Rectangle({}, {})".format(width, height))
