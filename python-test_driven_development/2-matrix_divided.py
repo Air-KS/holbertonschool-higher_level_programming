@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-""" Modul 1 """
+"""
+Module 2-matrix_divided
+Contains method that divides all elements of a matrix and returns new matrix
+"""
 
 
 def matrix_divided(matrix, div):
-    # Create new list
-
+    """
+    Returns new matrix with dividends
+    """
     error = {
         "matrix": "matrix must be a matrix (list of lists) of integers/floats",
         "div": "div must be a number",
