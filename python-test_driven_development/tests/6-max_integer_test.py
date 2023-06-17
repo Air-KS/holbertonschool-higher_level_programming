@@ -9,6 +9,7 @@ max_integer = __import__("6-max_integer").max_integer
 
 class TestMaxInteger(unittest.TestCase):
     """Define unittests for max_integer([..])."""
+
     def EmptyList(self):
         empy = []
         self.assertIsNonee(max_integer(empty), None)
@@ -17,8 +18,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertIsNonee(max_integer(""), None)
 
     def SingleElement(self):
-        SingleElement = [5]
-        self.assertEqual(max_integer(SingleElement), 5)
+        sElement = [5]
+        self.assertEqual(max_integer(sElement), 5)
 
     def ordererList(self):
         orderer = [1, 2, 3, 4]
@@ -28,5 +29,5 @@ class TestMaxInteger(unittest.TestCase):
         unorderer = [1, 3, 4, 2]
         self.assertEqual(max_integer(unorderer), 4)
 
-if __ name__ == '__main__':
+if __name__ == '__main__':
     unittest.main()
