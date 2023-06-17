@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Module 3-say_my_name
+Contains method that prints out "My name is [full name]"
+"""
+
+
 def say_my_name(first_name, last_name=""):
 
     if not isinstance(first_name, str):
