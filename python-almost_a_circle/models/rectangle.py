@@ -24,7 +24,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Set/get the width of the Rectangle."""
+        """Get/Set - the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -37,7 +37,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Set/get the height of the Rectangle."""
+        """Get/Set - the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -50,7 +50,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Set/get the x coordinate of the Rectangle."""
+        """Get/Set - The x coordinate of the Rectangle."""
         return self.__x
 
     @x.setter
@@ -63,7 +63,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """Set/get the y coordinate of the Rectangle."""
+        """Get/Set - The y coordinate of the Rectangle."""
         return self.__y
 
     @y.setter
@@ -102,23 +102,37 @@ class Rectangle(Base):
                                                         self.width,
                                                         self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update the Rectangle.
 
         Args:
-            1st argument should be the id attribute
-            2nd argument should be the width attribute
-            3rd argument should be the height attribute
-            4th argument should be the x attribute
-            5th argument should be the y attribute
+            - 1st argument should be the id attribute
+            - 2nd argument should be the width attribute
+            - 3rd argument should be the height attribute
+            - 4th argument should be the x attribute
+            - 5th argument should be the y attribute
+        **kwargs (Dictionary): New key/value of attributes.
         """
-        if len(args) >= 1:
-            self.id = args[0]
-        if len(args) >= 2:
-            self.width = args[1]
-        if len(args) >= 3:
-            self.height = args[2]
-        if len(args) >= 4:
-            self.x = args[3]
-        if len(args) >= 5:
-            self.y = args[4]
+        if args:
+            for key, value in enumerate(args):
+                if key == 0:
+                    self.id = value
+                elif key == 1:
+                    self.width = value
+                elif key == 2:
+                    self.height = value
+                elif key == 3:
+                    self.x = value
+                else:
+                    self.y = value
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
