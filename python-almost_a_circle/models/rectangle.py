@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Defines a base model class."""
 
-
 from models.base import Base
+
 
 class Rectangle(Base):
     """Represent a rectangle."""
@@ -17,7 +17,6 @@ class Rectangle(Base):
             y (int): The y coordinate of the new Rectangle.
             id (int): The identity of the new Rectangle.
         """
-
         self.width = width
         self.height = height
         self.x = x
