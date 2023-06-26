@@ -2,6 +2,7 @@
 """Defines a base model class."""
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """Represent a Square
 
