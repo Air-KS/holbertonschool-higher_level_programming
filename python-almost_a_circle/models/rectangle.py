@@ -22,12 +22,11 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    """ Getter (accesseur) pour width"""
     @property
     def width(self):
+        """Set/get the width of the Rectangle."""
         return self.__width
 
-    """" Setter (mutateur) pour width """
     @width.setter
     def width(self, value):
         if type(value) != int:
@@ -38,6 +37,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Set/get the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -50,6 +50,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Set/get the x coordinate of the Rectangle."""
         return self.__x
 
     @x.setter
@@ -57,11 +58,12 @@ class Rectangle(Base):
         if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
-            raise ValueError("x must be > 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
     def y(self):
+        """Set/get the y coordinate of the Rectangle."""
         return self.__y
 
     @y.setter
@@ -69,5 +71,5 @@ class Rectangle(Base):
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("y must be > 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
