@@ -62,8 +62,7 @@ class Square(Rectangle):
         """ Return dictionary representation """
         dictionary = {}
         dictionary["id"] = self.id
-        dictionary["width"] = self.width
-        dictionary["height"] = self.height
+        dictionary["size"] = self.size
         dictionary["x"] = self.x
         dictionary["y"] = self.y
         return (dictionary)
