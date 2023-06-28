@@ -32,3 +32,14 @@ class Base:
         if list_dictionaries is None:
             list_dictionaries = []
         return (json.dumps(list_dictionaries))
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Save json strings of all instances into file"""
+        objs = []
+        if list_objs is not None:
+            for obj in list_objs:
+                objs.append(cls.to_dictionary(obj))
+        filename = cls.__name__ + ".json"
+        with open(filename, "w") as files:
+            files.write(cls.to_json_string(objs))
