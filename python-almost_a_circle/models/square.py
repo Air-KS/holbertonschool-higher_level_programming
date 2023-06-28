@@ -29,10 +29,15 @@ class Square(Rectangle):
 
     def __str__(self):
         """ Return the print() and str() representation of the Square """
-        return ("[Square] ({}) {}/{} - {}".format(self.id,
-                                                        self.x,
-                                                        self.y,
-                                                        self.size))
+        id = self.id
+        x = self.x
+        y = self.y
+        size = self.size
+        return ("[Square] ({}) {}/{} - {}".format(type(self).__name__,
+                                                  id,
+                                                  x,
+                                                  y,
+                                                  size))
 
     def update(self, *args, **kwargs):
         """ Update the Square
