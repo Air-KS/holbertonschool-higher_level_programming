@@ -34,8 +34,8 @@ class Square(Rectangle):
         y = self.y
         _size = self.size
 
-        return ("[{}] ({}) {}/{} - {}".format(type(self).__name__,
-                                                  _id, x, y, _size))
+        return "[{}] ({}) {}/{} - {}".format(type(self).__name__,
+                                                  _id, x, y, _size)
 
     def update(self, *args, **kwargs):
         """ Update the Square
