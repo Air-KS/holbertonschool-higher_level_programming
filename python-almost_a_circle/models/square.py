@@ -33,6 +33,7 @@ class Square(Rectangle):
         x = self.x
         y = self.y
         _size = self.size
+
         return ("[{}] ({}) {}/{} - {}".format(type(self).__name__,
                                                   _id, x, y, _size))
 
