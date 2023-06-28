@@ -11,7 +11,6 @@ class Square(Rectangle):
 
         Args:
             size (int): The size of the new Square
-            size (int): The size of the new Square
             x (int): The x coordinate of the new Square
             y (int): The y coordinate of the new Square
             id (int): The identity of the new Square
@@ -27,6 +26,13 @@ class Square(Rectangle):
     def size(self, value):
         self.width = value
         self.height = value
+
+    def __str__(self):
+        """ Return the print() and str() representation of the Square """
+        return ("[Square] ({}) {}/{} - {}".format(self.id,
+                                                        self.x,
+                                                        self.y,
+                                                        self.size))
 
     def update(self, *args, **kwargs):
         """ Update the Square
