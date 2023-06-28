@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-""" Defines a base model class """
+"""Defines a base model class"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """ Represent a square. """
+    """Represent a square."""
 
     def __init__(self, size, x=0, y=0, id=None):
         """ Initialise the square
