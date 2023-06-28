@@ -29,7 +29,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """ Return the print() and str() representation of the Square """
-        id = self.id
+        _id = self.id
         x = self.x
         y = self.y
         size = self.size
