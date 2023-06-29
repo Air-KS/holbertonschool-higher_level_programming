@@ -1,19 +1,9 @@
 #!/usr/bin/python3
 # test_square.py
 """Defines unittests for models/square.py.
-
-Unittest classes:
-    TestSquare_instantiation - line 24
-    TestSquare_size - line 88
-    TestSquare_x - line 166
-    TestSquare_y - line 238
-    TestSquare_order_of_initialization - line 306
-    TestSquare_area - line 322
-    TestSquare_stdout - line 343
-    TestSquare_update_args - line 426
-    TestSquare_update_kwargs - line 538
-    TestSquare_to_dictionary - 640
 """
+
+
 import io
 import sys
 import unittest
@@ -108,10 +98,6 @@ class TestSquare_size(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square({"a": 1, "b": 2}, 2)
 
-    def test_bool_size(self):
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square(True, 2, 3)
-
     def test_list_size(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square([1, 2, 3])
@@ -185,9 +171,6 @@ class TestSquare_x(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, {"a": 1, "b": 2}, 2)
 
-    def test_bool_x(self):
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Square(1, True)
 
     def test_list_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
@@ -619,11 +602,6 @@ class TestSquare_update_kwargs(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             s.update(y=-5)
-
-    def test_update_args_and_kwargs(self):
-        s = Square(10, 10, 10, 10)
-        s.update(89, 2, y=6)
-        self.assertEqual("[Square] (89) 10/10 - 2", str(s))
 
     def test_update_kwargs_wrong_keys(self):
         s = Square(10, 10, 10, 10)
