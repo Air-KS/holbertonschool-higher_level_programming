@@ -186,18 +186,18 @@ class TestSquare(unittest.TestCase):
     def test_update_kwargs(self):
         """ Test if update method works with **kwargs """
         square = Square(1, 2, 3, 4)
-        square.update(id=10, size=20, x=30, y=40)
+        square.update(id=10, size=10, x=30, y=40)
         self.assertEqual(square.id, 10)
-        self.assertEqual(square.size, 20)
+        self.assertEqual(square.size, 10)
         self.assertEqual(square.x, 30)
         self.assertEqual(square.y, 40)
 
     def test_update_args_kwargs(self):
         """ Test if update method works with *args and **kwargs """
         square = Square(1, 2, 3, 4)
-        square.update(10, size=20, x=30, y=40)
+        square.update(size=10, x=30, y=40, id=10)
         self.assertEqual(square.id, 10)
-        self.assertEqual(square.size, 20)
+        self.assertEqual(square.size, 10)
         self.assertEqual(square.x, 30)
         self.assertEqual(square.y, 40)
 
