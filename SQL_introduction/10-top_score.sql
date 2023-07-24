@@ -1,2 +1,2 @@
 -- Display Score and Name -> Table seconde_tbale
-select score, name from second_table order by score desc
+SELECT score, name FROM hbtn_0c_0.second_table ORDER BY score DESC
