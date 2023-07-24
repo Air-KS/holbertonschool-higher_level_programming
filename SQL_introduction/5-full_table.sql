@@ -1,2 +1,2 @@
 -- Show description.
-describe hbtn_0c_0.first_table;
+show create table first_table
