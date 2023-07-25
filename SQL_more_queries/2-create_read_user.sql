@@ -8,4 +8,4 @@ CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
 
 -- Grant privileges to user
 GRANT SELECT ON hbtn_0d_2.* TO 'user_0d_2'@'localhost';
-ALTER USER 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
+SET PASSWORD FOR user_0d_2@localhost = 'user_0d_2_pwd';
