@@ -1,10 +1,10 @@
 ﻿-- MySQL server
 -- List join Dexter
 SELECT tv_genres.name 
-FROM tv_shows
+FROM tv_genres
     LEFT JOIN tv_shows_genres
-        ON tv_shows.id = tv_shows_genre.show_id
-    LEFT JOIN tv_genre
-        ON tv_shows_genre.genre_id = tv_genres.id
+        ON tv_genres.id = tv_shows_genre.genre.id
+    LEFT JOIN tv_shows
+        ON tv_shows_genres.show_id = tv_shows.id
 WHERE tv_shows.title = "Dexter" 
-ORDER BY tv_genre.name;
+ORDER BY tv_genres.name ASC ;
