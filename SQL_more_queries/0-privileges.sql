@@ -1,4 +1,5 @@
-﻿-- List all privileges of the user_0d_1 and user_0d_2
-
+﻿-- Grant previlges in MySQL server
+-- Lists all previleges of the user user_0d_1
 SHOW GRANTS FOR user_0d_1@localhost;
+-- Lists all previleges of the user user_0d_2
 SHOW GRANTS FOR user_0d_2@localhost;
