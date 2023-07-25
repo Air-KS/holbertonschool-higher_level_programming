@@ -1,4 +1,6 @@
-﻿-- Creates the database hbtn_2
+﻿-- Creates the database and user and add privileges
+
+-- Creates the database hbtn_2
 CREATE DATABASE IF NOT EXISTS 'hbtn_0d_2';
     
 -- Creates user_0d_2
