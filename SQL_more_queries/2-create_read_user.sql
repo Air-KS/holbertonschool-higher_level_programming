@@ -1,4 +1,4 @@
-﻿-- Creates the database and user and add privileges
+﻿-- Creates database and user in MySQL server
 
 -- Creates the database hbtn_2
 CREATE DATABASE IF NOT EXISTS 'hbtn_0d_2';
