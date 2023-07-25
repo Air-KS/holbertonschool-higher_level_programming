@@ -7,4 +7,3 @@ FROM tv_genre
         ON tv_genres.id = tv_show_genres.genre_id
 GROUP BY tv_show.name
 ORDER BY number_of_shows DESC;
-
