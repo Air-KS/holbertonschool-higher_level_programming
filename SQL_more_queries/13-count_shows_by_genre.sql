@@ -1,5 +1,4 @@
-﻿-- MySQL server
--- List all genre from tv_shows with number
+﻿-- List all genre from tv_shows with number
 SELECT tv_genre.name AS genre,
        COUNT(*) AS number_of_shows
 FROM tv_genre 
