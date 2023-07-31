@@ -4,17 +4,15 @@ return all table values (table 'states')
 parameters given to script: username, password, database
 """
 
-import mysql.connector
+import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
 
     # connect to database
-    db = mysql.connector.connect(host="localhost",
+    db = MySQLdb.connect(host="localhost",
                                  port=3306,
-                                 user=argv[1],
-                                 passwd=argv[2],
-                                 db=argv[3])
+                                 user=argv[1], passwd=argv[2], db=argv[3])
 
     # create cursor to exec queries using SQL
     cursor = db.cursor()
