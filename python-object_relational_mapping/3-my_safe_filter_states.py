@@ -13,8 +13,8 @@ if __name__ == "__main__":
                          db=argv[3])
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states \
-                WHERE name=%s ORDER BY id ASC", (argv[4],))
+    cur.execute("SELECT * FROM 'states' \
+                WHERE 'name'=%s ORDER BY id ASC", (argv[4],))
 
     all = cur.fetchall()
     for row in all:
