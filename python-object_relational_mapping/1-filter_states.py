@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-return all table values (table 'states')
-parameters given to script: username, password, database
-"""
+
 
 import MySQLdb
 from sys import argv
@@ -15,7 +12,8 @@ if __name__ == "__main__":
     # connect to database
     db = MySQLdb.connect(host="localhost",
                          port="3306",
-                         user=userName,password=password,
+                         user=userName,
+                         password=password,
                          db=databaseName)
 
     cur = db.cursor()
