@@ -16,9 +16,9 @@ if __name__ == "__main__":
     # Create cursor to execute using SQL; join two tables for all infoExécute une requête SQL
     cur = db.cursor()
     SQLCmd = """SELECT cities.id, cities.name, states.name 
-                FROM states
-                INNER JOIN cities ON states.id = cities.state_id
-                ORDER BY cities.id ASC """
+    FROM states
+    INNER JOIN cities ON states.id = cities.state_id
+    ORDER BY cities.id ASC """
     cur.execute(SQLCmd)
 
     for row in cur.fetchall():
