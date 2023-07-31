@@ -5,16 +5,13 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    userName = argv[1]
-    password = argv[2]
-    databaseName = argv[3]
 
     # connect to database
     db = MySQLdb.connect(host="localhost",
                          port="3306",
-                         user=userName,
-                         password=password,
-                         db=databaseName)
+                         user=argv[1],
+                         password=argv[2],
+                         db=argv[3])
 
     cur = db.cursor()
     cur.execute("SELECT * states WHERE\
