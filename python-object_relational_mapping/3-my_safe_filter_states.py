@@ -16,7 +16,8 @@ if __name__ == "__main__":
     
     # Exécute une requête SQL
     cur.execute("SELECT * FROM states \
-                WHERE name=%s ORDER BY states.id ASC", (argv[4],))
+                WHERE name=%s \
+                ORDER BY id ASC", (argv[4],))
 
     all = cur.fetchall()
     for row in all:
