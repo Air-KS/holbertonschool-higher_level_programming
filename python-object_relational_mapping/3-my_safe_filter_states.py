@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Lists all states  starting with ‘N’ from the database hbtn_0e_0_usa"""
+
+
 import MySQLdb
 from sys import argv
 
@@ -13,8 +14,8 @@ if __name__ == "__main__":
                          db=argv[3])
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM 'states' \
-                WHERE 'name'=%s ORDER BY id ASC", (argv[4],))
+    cur.execute("SELECT * FROM states \
+                WHERE name=%s ORDER BY states.id ASC", (argv[4],))
 
     all = cur.fetchall()
     for row in all:
