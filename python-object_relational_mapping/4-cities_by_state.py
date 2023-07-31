@@ -13,7 +13,7 @@ if __name__ == "__main__":
         passwd=argv[2],
         db=argv[3])
 
-    # Create cursor to execute using SQL; join two tables for all infoExécute une requête SQL
+    # Create cursor to execute using SQL; join two tables for all info
     cur = db.cursor()
     SQLCmd = """SELECT cities.id, cities.name, states.name 
     FROM states
