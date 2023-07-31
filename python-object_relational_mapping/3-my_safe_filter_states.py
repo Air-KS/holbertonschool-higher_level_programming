@@ -13,7 +13,7 @@ if __name__ == "__main__":
                          db=argv[3])
 
     cur = db.cursor()
-    
+
     # Exécute une requête SQL
     cur.execute("SELECT * FROM states \
                 WHERE name=%s \
