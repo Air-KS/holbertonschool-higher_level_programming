@@ -7,13 +7,14 @@ from sys import argv
 
 if __name__ == "__main__":
     # connect to database
-    db = MySQLdb.connect(host="localhost",
-                         port="3306",
+    db = MySQLdb.connect(host="localhost", port="3306",
                          user=argv[1],
-                         password=argv[2],
+                         passwd=argv[2],
                          db=argv[3])
 
     cur = db.cursor()
+    
+    # Exécute une requête SQL
     cur.execute("SELECT * FROM states \
                 WHERE name=%s ORDER BY states.id ASC", (argv[4],))
 
