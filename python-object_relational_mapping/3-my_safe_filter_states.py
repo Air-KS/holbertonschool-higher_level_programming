@@ -1,31 +1,32 @@
 #!/usr/bin/python3
-""" SQL injection to delete all record of a table"""
-
+""" SQL injection to delete all records of a table…"""
+import sys
 import MySQLdb
-from sys import argv
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
-    # connect to database
     db = MySQLdb.connect(
-        host="localhost", port="3306",
-        user=argv[1],
-        passwd=argv[2],
-        db=argv[3])
+        host="localhost", port=3306,
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3])
 
-    # Cursor
+    # Création d'un curseur
     cur = db.cursor()
 
-    # Exécute une requête SQL
+    # Exécution requêtes SQL
     cur.execute(
         "SELECT * FROM states \
         WHERE name=%s \
-        ORDER BY states.id ASC", (argv[4],)
+        ORDER BY states.id ASC", (sys.argv[4],)
     )
 
+    # Récupération des résultats
     states = cur.fetchall()
-    for row in states:
-        print(row)
+
+    # Affichage des résultats
+    for state in states:
+        print(state)
 
     cur.close()
     db.close()
