@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 """Lists all states  starting with ‘N’ from the database hbtn_0e_0_usa"""
-
-
 import sys
 import MySQLdb
 
-if __name__ == "__main__":
 
+if __name__ == "__main__":
     # connect to database
     db = MySQLdb.connect(host="localhost",
                          port="3306",
