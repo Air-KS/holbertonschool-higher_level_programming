@@ -22,7 +22,7 @@ if __name__ == '__main__':
         WHERE states.name = %s \
         ORDER BY cities.id", (sys.argv[4],))
 
-    # Recuperation des résultats
+    # Recuperation résultats
     rows = cur.fetchall()
 
     cities = [row[0] for row in rows]
