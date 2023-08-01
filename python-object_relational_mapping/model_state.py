@@ -1,16 +1,21 @@
 #!/usr/bin/python3
-"""Create class inherits from Base """
+"""
+Defines class State
+"""
 
-from sqlalchemy.ext.declarative import declarative_base
+
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+
 
 Base = declarative_base()
 
 
 class State(Base):
+    """Define state
+    Args:
+        Base (object): Define class model
     """
-    State class that represents a state table in MySQL
-    """
-    __tablename__ = 'states'
-    id = Column(Integer, autoincrement=True, nullable=False, primary_key=True)
+    __tablename__ = "states"
+    id = Column(Integer, nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
