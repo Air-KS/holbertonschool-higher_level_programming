@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-lists all State objects that contain the letter a
-from the database hbtn_0e_6_usa
+script that prints the State object
+with the name passed as argument from the database hbtn_0e_6_usa
 """
 
 
@@ -22,10 +22,16 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
+    # Search for the State object with the given name
+    state_name_to_search = sys.argv[4]
+    state = session.query(State) \
+        .filter(State.name == state_name_to_search).first()
+
     # Display the results
-    for state in session.query(State).order_by(State.id):
-        if "a" in state.name:
-            print("{}: {}".format(state.id, state.name))
+    if state is None:
+        print("Not found")
+    else:
+        print(state.id)
 
     # Close the session
     session.close()
