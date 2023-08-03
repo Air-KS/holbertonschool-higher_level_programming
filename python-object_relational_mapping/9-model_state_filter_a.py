@@ -18,7 +18,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Display the results
+    # Display the resulte
+
     for instance in session.query(State).order_by(State.id):
         print("{:d}: {:s}".format(instance.id, instance.name))
 
