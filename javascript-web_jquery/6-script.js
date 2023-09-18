@@ -14,7 +14,7 @@ $(document).ready(function () {
   fetch(url)
   .then(response => response.json())
   .then(data => {
-    $('#update_header').text(data_name);
+    $('#update_header').text(data.name);
   })
   .catch(error => console.error('error with fetch :', error));
 });
